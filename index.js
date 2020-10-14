@@ -33,7 +33,7 @@ const questions = [{
     name: "collaborators"
 },
 {
-    type: "choice",
+    type: "list",
     message: "Which license would you like to use?",
     choices: license,
     name: "selectedLicense"
