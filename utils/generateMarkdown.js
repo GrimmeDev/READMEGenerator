@@ -1,6 +1,8 @@
 // function to generate markdown for README
 function generateMarkdown(data) {
     // DESTRUCTURE data(?)
+    // May want to write checks to see if collaborators is NOT empty, if empty return a different template?
+    // If not empty, split(?) data.collaborators into different segments to link to their github profiles?
     // USE TEMPLATE LITERAL
     /*
     Project Title
