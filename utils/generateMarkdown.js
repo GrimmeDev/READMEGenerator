@@ -18,14 +18,18 @@ function generateMarkdown(data) {
     ${data.description}
     ## Table of Contents
 
-    ## Installation
+    ### Installation
     ${data.installGuide}
-    ## Usage
+    ### Usage
     ${data.usageGuide}
-    ## Credits
-    ${data.collaborators}
-    ## License
+    #### License
     ${data.selectedLicense}
+
+    #### Questions?
+    If you have questions regarding this program:
+    Send me a message through GitHub here [githublink] or through email here [email link]
+    ##### Credits
+    ${data.collaborators}
 
 `;
 }
