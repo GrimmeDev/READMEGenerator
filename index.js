@@ -33,9 +33,9 @@ const questions = [{
     name: "collaborators"
 },
 {
-    type:"input",
-    message:"How does a user test this application?",
-    name:"testingGuide"
+    type: "input",
+    message: "How does a user test this application?",
+    name: "testingGuide"
 },
 {
     type: "list",
@@ -57,7 +57,16 @@ const questions = [{
 
 // function to write README file
 function writeToFile(data) {
-    fs.writeFile("README.md", generate(data));
+    console.log("LN 60: " + data);
+    console.log("In WriteTo");
+    data = generate(data)
+    console.log("Post Generate Data: " + data);
+    fs.writeFile("README.md", data, function (err) {
+        if (err)
+            console.log("Write Error: " + err);
+        else
+            console.log("File Written");
+    });
 }
 
 // function to initialize program
@@ -68,10 +77,9 @@ async function init() {
         const data = await
             inquirer
                 .prompt(questions);
-        console.log(data.collaborators);
-        // writeToFile(data);
+        writeToFile(data);
     } catch (err) {
-        confirm.log("Error" + err);
+        console.log("Error " + err);
     }
 }
 
