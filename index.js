@@ -33,6 +33,11 @@ const questions = [{
     name: "collaborators"
 },
 {
+    type:"input",
+    message:"How does a user test this application?",
+    name:"testingGuide"
+},
+{
     type: "list",
     message: "Which license would you like to use?",
     choices: license,
