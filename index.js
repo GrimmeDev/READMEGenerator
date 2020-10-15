@@ -29,7 +29,7 @@ const questions = [{
 },
 {
     type: "input",
-    message: "Who helped collaborate with this project? (Type their GitHub User Name",
+    message: "Who helped collaborate with this project? (Type their GitHub User Name)",
     name: "collaborators"
 },
 {
