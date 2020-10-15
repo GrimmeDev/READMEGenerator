@@ -54,9 +54,9 @@ const questions = [{
     name: "creatorEmail"
 },
 {
-    type:"input",
-    message:"Would you like to include a special note in your readme? (Type nothing to exclude)",
-    name:"specialMsg"
+    type: "input",
+    message: "Would you like to include a special note in your readme? (Type nothing to exclude)",
+    name: "specialMsg"
 }
 ];
 
@@ -78,6 +78,7 @@ function writeToFile(data) {
 // using async instead of .prompt().then()
 async function init() {
     // put inquirer inside here
+    console.log("Answer the questions as fully and completely as possible. Take as much time as needed and be as descriptive as");
     try {
         const data = await
             inquirer
