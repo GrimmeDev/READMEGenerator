@@ -49,7 +49,8 @@ ${collabs.map(collabs => `[${" " + collabs}]("https://github.com/"${collabs})`)}
 ${data.testingGuide}
 #### Questions?
 If you have questions regarding this program:
-Send me a message through GitHub here [![GitHub Link](https://img.shields.io/badge/Github-${data.creatorGithub}-lightgrey.svg)](https://github.com/${data.creatorGithub}) or through email here [![Email Link](https://img.shields.io/badge/EMAIL-ME-lightgrey.svg)](${data.creatorEmail})
+[![GitHub Link](https://img.shields.io/badge/Github-${data.creatorGithub}-lightgrey.svg)](https://github.com/${data.creatorGithub}) Send me a message through GitHub!
+[![Email Link](https://img.shields.io/badge/EMAIL-ME-lightgrey.svg)](${data.creatorEmail}) Or through email here!
 ${data.specialMsg ?
                         `#### Special Message\n
 ${data.specialMsg}}` : ""}
