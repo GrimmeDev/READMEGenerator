@@ -1,7 +1,7 @@
 // function to generate markdown for README
 function generateMarkdown(data) {
-        console.log("In Generate");
-        console.log(data);
+        // console.log("In Generate");
+        // console.log(data);
         const collabs = data.collaborators.split(/[.,\/ -]/);
         // DESTRUCTURE data(?)
         // May want to write checks to see if collaborators is NOT empty, if empty return a different template?
@@ -19,30 +19,26 @@ function generateMarkdown(data) {
     
         */
         return `# ${data.projectName}
-    [![Ask Me Anything !](https://img.shields.io/badge/Ask%20me-anything-1abc9c.svg)](https://GitHub.com/Naereen/ama)[![GitHub license](https://img.shields.io/github/license/Naereen/StrapDown.js.svg)](https://github.com/Naereen/StrapDown.js/blob/master/LICENSE)
-    ## Description
-    ${data.description}
-    ## Table of Contents
+## Description
+${data.description}
+## Table of Contents
 
-    ### Installation
-    ${data.installGuide}
-    ### Usage
-    ${data.usageGuide}
-    #### License
-    ${data.selectedLicense}
-    ${collabs.length > 1 ?
+### Installation
+${data.installGuide}
+### Usage
+${data.usageGuide}
+#### License
+${data.selectedLicense}
+${collabs != "" ?
                         `#### Collaborators \n
-    ${collabs.map(collabs => `[${collabs}]("https://github.com/"+${collabs}).join(" ")`)}`
-                        : ""}
-    #### Testing
-    ${data.testingGuide}
-
-    #### Questions?
-    If you have questions regarding this program:
-    Send me a message through GitHub here [githublink] or through email here [email link]
-    ##### Credits
+${collabs.map(collabs => `[${" " + collabs}]("https://github.com/"${collabs})`)}` : ""}
+#### Testing
+${data.testingGuide}
+#### Questions?
+If you have questions regarding this program:
+Send me a message through GitHub here [![GitHub Link](https://img.shields.io/badge/Github-${data.creatorGithub}-lightgrey.svg)](https://github.com/${data.creatorGithub}) or through email here [email link]
+##### Credits
 
 `;
 }
-
 module.exports = generateMarkdown;
