@@ -16,6 +16,7 @@ function generateMarkdown(data) {
 
     */
     return `# ${data.projectName}
+    [![Ask Me Anything !](https://img.shields.io/badge/Ask%20me-anything-1abc9c.svg)](https://GitHub.com/Naereen/ama)[![GitHub license](https://img.shields.io/github/license/Naereen/StrapDown.js.svg)](https://github.com/Naereen/StrapDown.js/blob/master/LICENSE)
     ## Description
     ${data.description}
     ## Table of Contents
@@ -26,12 +27,17 @@ function generateMarkdown(data) {
     ${data.usageGuide}
     #### License
     ${data.selectedLicense}
+    ${data.collaborators ?
+            `#### Collaborators \n
+    ${data.collaborators.map(collabs => `[${collabs}]("https://github.com/"+${collabs}).join(" ")`)}`
+            : ""}
+    #### Testing
+    ${data.testingGuide}
 
     #### Questions?
     If you have questions regarding this program:
     Send me a message through GitHub here [githublink] or through email here [email link]
     ##### Credits
-    ${data.collaborators}
 
 `;
 }
