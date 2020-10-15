@@ -29,7 +29,7 @@ const questions = [{
 },
 {
     type: "input",
-    message: "Who helped collaborate with this project? (Type their GitHub User Name)",
+    message: "Who, if anyone, helped collaborate on this project? Type their GitHub names (Type nothing to exclude)",
     name: "collaborators"
 },
 {
@@ -52,15 +52,20 @@ const questions = [{
     type: "input",
     message: "What is your email address?",
     name: "creatorEmail"
+},
+{
+    type:"input",
+    message:"Would you like to include a special note in your readme? (Type nothing to exclude)",
+    name:"specialMsg"
 }
 ];
 
 // function to write README file
 function writeToFile(data) {
-    console.log("LN 60: " + data);
-    console.log("In WriteTo");
+    // console.log("LN 60: " + data);
+    // console.log("In WriteTo");
     data = generate(data)
-    console.log("Post Generate Data: " + data);
+    // console.log("Post Generate Data: " + data);
     fs.writeFile("README.md", data, function (err) {
         if (err)
             console.log("Write Error: " + err);
