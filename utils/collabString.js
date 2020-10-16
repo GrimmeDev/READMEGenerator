@@ -1,6 +1,6 @@
 // Called to generate proper string containing all collaborators
 function collaboratorList(collabs) {
-    console.log(collabs);
+    // console.log(collabs);
     let collabString = "";
     for (let i = 0; i < collabs.length; i++) {
         if ((collabs != "") && (collabs != " "))
