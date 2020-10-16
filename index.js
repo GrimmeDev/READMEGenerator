@@ -19,7 +19,7 @@ const questions = [{
 },
 {
     type: "input",
-    message: "What, if any, are the installation instructions for this program?",
+    message: "What installation instructions are there for this program?",
     name: "installGuide"
 },
 {
@@ -29,12 +29,12 @@ const questions = [{
 },
 {
     type: "input",
-    message: "Who, if anyone, helped collaborate on this project? Type their GitHub names (Type nothing to exclude)",
+    message: "* Who, if anyone, helped collaborate on this project? Type their GitHub names",
     name: "collaborators"
 },
 {
     type: "input",
-    message: "How does a user test this application?",
+    message: "* How does a user test this application?",
     name: "testingGuide"
 },
 {
@@ -55,7 +55,7 @@ const questions = [{
 },
 {
     type: "input",
-    message: "Would you like to include a special note in your readme? (Type nothing to exclude)",
+    message: "* Would you like to include a special note in your readme?",
     name: "specialMsg"
 }
 ];
@@ -78,7 +78,8 @@ function writeToFile(data) {
 // using async instead of .prompt().then()
 async function init() {
     // put inquirer inside here
-    console.log("Answer the questions as fully and completely as possible. Take as much time as needed and be as descriptive as");
+    console.log("Answer the questions as fully and completely as possible. Take as much time as needed and be as descriptive as.");
+    console.log("Type nothing to exclude prompts denoted with a '*' symbol.");
     try {
         const data = await
             inquirer
