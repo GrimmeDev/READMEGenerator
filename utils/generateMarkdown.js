@@ -29,7 +29,7 @@ ${data.description}
 * [Installation](#Installation)
 * [Usage](#Usage)
 * [License](#License)
-${collabs?
+${collabs!=""?
                         `* [Collaborators](#Collaborators)` : ""}
 ${data.testingGuide ?
                         `* [Testing](#Testing)` : ""}
@@ -43,7 +43,7 @@ ${data.usageGuide}
 ### License
 ${data.selectedLicense}
 ${collabs?
-                        `### Collaborators\n
+                        `### Collaborators
 ${collabList(collabs)}` : ""}
 ### Testing
 ${data.testingGuide}
@@ -52,7 +52,7 @@ If you have questions regarding this program:<br>
 Send me a message through GitHub: [![GitHub Link](https://img.shields.io/badge/Github-${data.creatorGithub}-lightgrey.svg)](https://github.com/${data.creatorGithub})<br>
 Or through email here: <a href="mailto:${data.creatorEmail}" target="_blank">![Email Link](https://img.shields.io/badge/EMAIL-ME-informational.svg)</a>
 ${data.specialMsg ?
-                        `#### Special Message\n
+                        `#### Special Message
 ${data.specialMsg}` : ""}
 
 `;
