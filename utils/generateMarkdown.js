@@ -53,8 +53,6 @@ Send me a message through GitHub: [![GitHub Link](https://img.shields.io/badge/G
 Or through email here: <a href="mailto:${data.creatorEmail}" target="_blank">![Email Link](https://img.shields.io/badge/EMAIL-ME-informational.svg)</a>
 ${data.specialMsg ?
                         `#### Special Message
-${data.specialMsg}` : ""}
-
-`;
+${data.specialMsg}` : ""}`;
 };
 module.exports = generateMarkdown;
