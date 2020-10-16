@@ -13,12 +13,14 @@ A ReadMe.md generator based on user prompts
 ## Installation
 Clone the repo down to your machine using GitBash or Terminal. Once that is done open up an integrated terminal in the same location as `index.js` and type the command: `npm install`.
 ![Step 1](images/step1.png)
+
 This will automatically install the necessary packages required to run the program.
 ## Usage
 VIDEO TUTORIAL
 [Video Link](https://drive.google.com/file/d/15EAnY7luSVQu6cqf_hMAfFA1uIUlJoQp/preview)<br>
 Once the packages have been installed, in the same terminal type the command `node index.js`, you will then be given a series of prompts to answer.
 ![Step 2](images/step2.png)
+
 These answers will be used to generate the ReadMe.md.
 ![Step 3](images/step3.png)
 ### License
