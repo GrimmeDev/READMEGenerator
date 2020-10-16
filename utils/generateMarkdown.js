@@ -1,3 +1,5 @@
+const collabList = require("./collabString.js");
+
 // function to generate markdown for README
 function generateMarkdown(data) {
         // console.log("In Generate");
@@ -23,38 +25,36 @@ function generateMarkdown(data) {
 ## Description
 ${data.description}
 ## Table of Contents
-<ol>
-<li>[Description](#Description)</li>
-<li>[Installation](#Installation)</li>
-<li>[Usage](#Usage)</li>
-<li>[License](#License)</li>
-${collabs != "" ?
-                        `<li>[Collaborators](#Collaborators)</li>` : ""}
-<li>[Testing](#Testing)</li>
-<li>[Questions](#Questions)</li>
+* [Description](#Description)
+* [Installation](#Installation)
+* [Usage](#Usage)
+* [License](#License)
+${collabs?
+                        `* [Collaborators](#Collaborators)` : ""}
+${data.testingGuide ?
+                        `* [Testing](#Testing)` : ""}
+* [Questions](#Questions)
 ${data.specialMsg ?
-                        `<li>[Special](#Special)</li>` : ""}
-</ol>
-
+                        `* [Special](#Special)` : ""}
 ## Installation
 ${data.installGuide}
 ## Usage
 ${data.usageGuide}
 ### License
 ${data.selectedLicense}
-${collabs != "" ?
-                        `#### Collaborators
-${collabs.map(collabs => `[${" " + collabs}]("https://github.com/"${collabs})`)}` : ""}
+${collabs?
+                        `### Collaborators\n
+${collabList(collabs)}` : ""}
 ### Testing
 ${data.testingGuide}
 #### Questions?
-If you have questions regarding this program:
-[![GitHub Link](https://img.shields.io/badge/Github-${data.creatorGithub}-lightgrey.svg)](https://github.com/${data.creatorGithub}) Send me a message through GitHub!
-[![Email Link](https://img.shields.io/badge/EMAIL-ME-lightgrey.svg)](${data.creatorEmail}) Or through email here!
+If you have questions regarding this program:<br>
+Send me a message through GitHub: [![GitHub Link](https://img.shields.io/badge/Github-${data.creatorGithub}-lightgrey.svg)](https://github.com/${data.creatorGithub})<br>
+Or through email here: <a href="mailto:${data.creatorEmail}" target="_blank">![Email Link](https://img.shields.io/badge/EMAIL-ME-informational.svg)</a>
 ${data.specialMsg ?
                         `#### Special Message\n
-${data.specialMsg}}` : ""}
+${data.specialMsg}` : ""}
 
 `;
-}
+};
 module.exports = generateMarkdown;
