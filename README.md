@@ -1,34 +1,31 @@
-# ReadMe
+# ReadMe Generator
 ## Description
-Desc
+A ReadMe.md generator based on user prompts
 ## Table of Contents
-<ol>
-<li>[Description](#Description)</li>
-<li>[Installation](#Installation)</li>
-<li>[Usage](#Usage)</li>
-<li>[License](#License)</li>
-<li>[Collaborators](#Collaborators)</li>
-<li>[Testing](#Testing)</li>
-<li>[Questions](#Questions)</li>
-<li>[Special](#Special)</li>
-</ol>
-
+* [Description](#Description)
+* [Installation](#Installation)
+* [Usage](#Usage)
+* [License](#License)
+* [Collaborators](#Collaborators)
+* [Testing](#Testing)
+* [Questions](#Questions)
+* [Special](#Special)
 ## Installation
-Install
+Clone the repo down to your machine using GitBash or Terminal. Once that is done open up an integrated terminal in the same location as `index.js` and type the command: `npm install`. This will automatically install the necessary packages required to run the program.
 ## Usage
-Use
+Once the packages have been installed, in the same terminal type the command `node index.js`, you will then be given a series of prompts to answer. These answers will be used to generate the ReadMe.md
 ### License
-Apache License 2.0
-#### Collaborators 
+MIT
+### Collaborators
 
-[ Collab1]("https://github.com/"Collab1),[ Collab2]("https://github.com/"Collab2)
+
 ### Testing
-Test
+No testing is needed externally. The program will catch errors as best able through error logging and try/catch
 #### Questions?
-If you have questions regarding this program:
-Send me a message through GitHub here [![GitHub Link](https://img.shields.io/badge/Github-Test-lightgrey.svg)](https://github.com/Test)<br>
-Or through email here [![Email Link](https://img.shields.io/badge/EMAIL-ME-lightgrey.svg)](Test)
+If you have questions regarding this program:<br>
+Send me a message through GitHub: [![GitHub Link](https://img.shields.io/badge/Github-GrimmeDev-lightgrey.svg)](https://github.com/GrimmeDev)<br>
+Or through email here: <a href="mailto:rjgrimes@gmail.com" target="_blank">![Email Link](https://img.shields.io/badge/EMAIL-ME-informational.svg)</a>
 #### Special Message
 
-Hello}
+This ReadMe.md was generated using the program itself, and edited later for additional content
 
